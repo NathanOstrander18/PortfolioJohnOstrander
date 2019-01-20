@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'ADayWithoutSun';
+    src: url('/assets/A_DAY_WITHOUT_SUN.otf');
+}
+h2 {
+    font-family: 'ADayWithoutSun', serif;
+    font-size: 90px;
+}
+h1 {
+    font-family: 'ADayWithoutSun', serif;
+    font-size: 18vh;
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+.main-content-container {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
