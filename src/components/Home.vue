@@ -1,5 +1,5 @@
 <template>
-    <div class="home container">
+    <div class="home main-content-container">
         <div class="row h-100 m-2">
             <div v-for="(tile, index) in tiles" @mouseover="hoverTile(index)" @mouseout="hoverTile(-1)" class="col-sm-4 mb-2">
                 <router-link class="tile" :to="tile.source">
@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
     .home {
-        height: 100%;
+        height: 95%;
     }
     .tile {
         height: 100%;

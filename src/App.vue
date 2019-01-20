@@ -38,7 +38,7 @@
     }
     .nav {
         /* mess with this to change the sizing of the pottom container */
-        height: 10vh;
+        height: 5vh;
         width: 100%;
         top: 18vh;
         position: fixed;
@@ -49,8 +49,8 @@
         position: fixed;
         width: 100%;
         /* finely tuned so there is no ovelap over the nav shadow */
-        top: 28.30vh;
-        height: 71.70vh;
-        /* overflow: scroll; */
+        top: 23.30vh;
+        height: 76.70vh;
+        overflow: scroll;
     }
 </style>

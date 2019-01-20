@@ -24,6 +24,23 @@ hr {
 }
 .main-content-container {
     height: 100%;
-    width: 100%;
-    overflow: scroll;
+    margin: 20px 20vh 0 20vh;
+}
+.btn-primary-outline {
+    background-color: transparent;
+}
+.btn-primary-outline:hover {
+    background-color: #f8f9fa;
+}
+.date {
+    margin-left: 20px;
+    font-size: 20px;
+}
+.image {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ebebeb;
+    margin: 5px;
 }
