@@ -22,9 +22,17 @@ hr {
   border-width: 1px 0;
   margin: 18px 0;
 }
-.main-content-container {
-    height: 100%;
-    margin: 20px 20vh 0 20vh;
+@media screen and (min-width: 768px) {
+    .main-content-container {
+        height: 100%;
+        margin: 20px 20vh 0 20vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main-content-container {
+        height: 100%;
+        margin: 20px 0 0 0;
+    }
 }
 .btn-primary-outline {
     background-color: transparent;
@@ -42,5 +50,17 @@ hr {
     background-repeat: no-repeat;
     background-position: center center;
     border: 1px solid #ebebeb;
-    margin: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 14px;
+}
+.title_img {
+    width: 200px;
+    vertical-align: bottom;
+}
+.vertical-center {
+  position: absolute;
+  top: 50%;
 }

@@ -4,7 +4,7 @@
             <div class="col-md-6">
                 <div v-if="exp.logo">
                     <p>
-                        <img class="title pull-left" :src="exp.logo"/>
+                        <img class="title_img pull-left" :src="exp.logo"/>
                         <span class="date">{{exp.date}}</span>
                     </p>
                 </div>
@@ -101,11 +101,6 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    
-    .title {
-        width: 200px;
-        vertical-align: bottom;
     }
 
 </style>

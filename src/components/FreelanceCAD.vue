@@ -2,11 +2,29 @@
     <div class="main-content-container">
         <div v-for="(exp, key) in experiences" :key="key" class="row mb-5">
             <div class="col-md-6">
-                    <h4>{{exp.title}}<small class="date">{{exp.date}}</small></h4>
-                    <p>{{exp.description}}</p>
-                    <a :href="exp.link">{{exp.link}}</a>
+                <div v-if="exp.logo">
+                    <div v-if="key == 0">
+                        <p>
+                            <img class="title_img pull-left" :src="exp.logo"/>
+                            <span class="date">{{exp.date}}</span>
+                        </p>
+                    </div>
+                    <div v-else>
+                        <p>
+                            <img class="title_img pull-left" style="background-color:#D3D3D3;" :src="exp.logo"/>
+                            <span class="date">{{exp.date}}</span>
+                        </p>
+                    </div>
+                </div>
+                <div v-else>
+                    <p>
+                        <h3>{{exp.title}}<small class="date">{{exp.date}}</small></h3>
+                    </p>
+                </div>
+                <p>{{exp.description}}</p>
+                <a :href="exp.link">{{exp.link}}</a>
             </div>
-            <div v-if="exp.title == 'Fusion 360 Student Expert'" clas="col-md-6">
+            <div v-if="exp.title == 'Fusion 360 Student Expert'" class="col-md-6">
                 <gallery :images="fusionDesigns" :index="index" @close="index = null"></gallery>
                 <div 
                     v-for="(image, imageIndex) in fusionDesigns" 
@@ -14,6 +32,9 @@
                     @click="index = imageIndex">
                     <img :src="image" class="image" style="width: 70vh;"/>
                 </div>
+            </div>
+            <div v-if="exp.title == 'XACT Metal'" class="col-md-6">
+                <iframe src="https://www.youtube.com/embed/WYoEBgohg1I" width="600" height="300" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -27,6 +48,11 @@ import fd4 from "@/assets/FreelanceCAD/Fusion360StudentExpert/WaterBottle2.jpg"
 import fd5 from "@/assets/FreelanceCAD/Fusion360StudentExpert/Watch1.jpg"
 import fd6 from "@/assets/FreelanceCAD/Fusion360StudentExpert/Watch2.png"
 
+import AIONIXLogo from "@/assets/FreelanceCAD/AIONX.png"
+import XActMetalLogo from "@/assets/FreelanceCAD/XActMetal.png"
+import ChartlyticsLogo from "@/assets/FreelanceCAD/Chartlytics.png"
+
+
 import VueGallery from 'vue-gallery';
 
 
@@ -39,19 +65,22 @@ export default {
                   title:"AIONX Summer",
                   date:"2017-Current",
                   description:"Case and rail cover design. Modeled original and edited existing designs. Worked with point cloud data to fit product to existing geometries. Communicated designs to engineering and manufacturing leads. Design tools & processes used: AutoCAD, Meshmixer, SolidWorks, Material Extrusion, Stereolithography, Thermoforming, Injection Molding.",
-                  link:"http://aionx.com/"
+                  link:"http://aionx.com/",
+                  logo: AIONIXLogo
               },
               {
                   title:"Chartlytics",
                   date:"Summer 2017",
                   description:"Modeled a demonstration of XACT Metal 3D Printing Technology in Virtual Reality. Included printer animations and allowed for user interaction. Used to advertise the technology at Rapid+TCT in Summer 2017. Design tools used: SolidWorks, Blender, Unity, HTC Vive.",
-                  link:"https://www.xactmetal.com/"
+                  link:"https://www.xactmetal.com/",
+                  logo: ChartlyticsLogo
               },
               {
                   title:"XACT Metal",
                   date:"Spring 2017-Summer 2017",
                   description:"Iterative electronics case design and prototyping. Design tools & processes used: Fusion 360, SolidWorks, Material Extrusion, PolyJet, Stereolithography.",
-                  link:"https://www.chartlytics.com/"
+                  link:"https://www.chartlytics.com/",
+                  logo: XActMetalLogo
               },
               {
                   title:"Fusion 360 Student Expert",

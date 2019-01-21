@@ -6,6 +6,7 @@ import DesignThinking from './components/DesignThinking.vue'
 import FreelanceCAD from './components/FreelanceCAD.vue'
 import Coursework from './components/Coursework.vue'
 import Research from './components/Research.vue'
+import Leadership from './components/Leadership.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
               path: '/Research',
               name: 'Research',
               component: Research
+      },
+      {
+              path: '/Leadership',
+              name: 'Leadership',
+              component: Leadership
       }
   ]
 })
