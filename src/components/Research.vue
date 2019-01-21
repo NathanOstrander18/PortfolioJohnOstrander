@@ -17,7 +17,7 @@
             </div>
             <div class="col-sm-6">
                 <iframe src="https://www.youtube.com/embed/1Oqb0TOvV7k" style="width: 80vh; height: 40vh; margin-bottom: 100px;" allowfullscreen></iframe>
-                <img src="@/assets/Research/Workflow.png" style="width: 80vh;">
+                <img src="@/assets/Research/workflowImg.png" style="width: 80vh;">
             </div>
         </div>
     </div>
