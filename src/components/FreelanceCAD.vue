@@ -49,8 +49,8 @@ export default {
       return {
           experiences: [
               {
-                  title:"AIONX Summer",
-                  date:"2017-Current",
+                  title:"AIONX",
+                  date:"Summer 2017-Current",
                   description:"Case and rail cover design. Modeled original and edited existing designs. Worked with point cloud data to fit product to existing geometries. Communicated designs to engineering and manufacturing leads. Design tools & processes used: AutoCAD, Meshmixer, SolidWorks, Material Extrusion, Stereolithography, Thermoforming, Injection Molding.",
                   link:"http://aionx.com/",
                   logo: AIONIXLogo
@@ -58,14 +58,14 @@ export default {
               {
                   title:"Chartlytics",
                   date:"Summer 2017",
-                  description:"Modeled a demonstration of XACT Metal 3D Printing Technology in Virtual Reality. Included printer animations and allowed for user interaction. Used to advertise the technology at Rapid+TCT in Summer 2017. Design tools used: SolidWorks, Blender, Unity, HTC Vive.",
+                  description:"Iterative electronics case design and prototyping. Design tools & processes used: Fusion 360, SolidWorks, Material Extrusion, PolyJet, Stereolithography.",
                   link:"https://www.chartlytics.com/",
                   logo: ChartlyticsLogo
               },
               {
                   title:"XACT Metal",
                   date:"Spring 2017-Summer 2017",
-                  description:"Iterative electronics case design and prototyping. Design tools & processes used: Fusion 360, SolidWorks, Material Extrusion, PolyJet, Stereolithography.",
+                  description:"Modeled a demonstration of XACT Metal 3D Printing Technology in Virtual Reality. Included printer animations and allowed for user interaction. Used to advertise the technology at Rapid+TCT in Summer 2017. Design tools used: SolidWorks, Blender, Unity, HTC Vive.",
                   link:"https://www.xactmetal.com/",
                   logo: XActMetalLogo
               },
