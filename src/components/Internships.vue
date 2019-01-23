@@ -1,30 +1,23 @@
 <template>
-    <div class="main-content-container">
-        <div v-for="(exp, key) in experiences" :key="key" class="row mb-5">
-            <div class="col-md-6">
-                <div v-if="exp.logo">
-                    <p>
-                        <img class="title_img pull-left" :src="exp.logo"/>
-                        <span class="date">{{exp.date}}</span>
-                    </p>
-                </div>
-                <div v-else>
-                    <p>
-                        <h3>{{exp.title}}<small class="date">{{exp.date}}</small></h3>
-                    </p>
-                </div>
-                <p>{{exp.description}}</p>
-                <a :href="exp.url">{{exp.url}}</a>
-            </div>
-            <div v-if="exp.title == 'Motiv Design'" class="col-md-6">
+    <div class="main_content_container">
+        <img class="main-content-image" src="@/assets/menu_icons/Internships.png">
+        <br><br>
+        <div v-for="(exp, key) in experiences" :key="key" class="mb-5">
+                <h3 class="text-center">{{exp.title}}</h3>
+                <h4 class="text-center">{{exp.date}}</h4>
+                <p class="text-center">{{exp.description}}</p>
+                <p class="text-center">
+                    <a :href="exp.url" target="_blank">{{exp.url}}</a>
+                </p>
+            <div class="row" v-if="exp.title == 'Motiv Design'" >
                 <gallery :images="images" :index="index" @close="index = null"></gallery>
                 <div
-                    class="image"
-                    v-for="(image, imageIndex) in images"
-                    :key="imageIndex"
-                    @click="index = imageIndex"
-                    :style="{ backgroundImage: 'url(' + image + ')', width: '150px', height: '100px' }"
-                ></div>
+                    class="col-sm-4 mb-4"
+                    v-for="(image, imageIndex) in images" 
+                    :key="imageIndex" 
+                    @click="index = imageIndex">
+                    <img :src="image" class="gallery-image center-image" style="width: 100%;"/>
+                </div>
             </div>
         </div>
     </div>
@@ -101,6 +94,12 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    
+    .motiv-image {
+        object-fit: scale-down;
+        width: auto;
+        height: 95%;
     }
 
 </style>

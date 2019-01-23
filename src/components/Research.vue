@@ -1,24 +1,25 @@
 <template>
     <div class="main-content-container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div v-for="(section, key) in sections" :key="key" class="row mb-5">
-                    <h4 style="margin-right: 200px;">{{section.heading}}</h4>
-                    <div v-if="section.text">
-                        <p>{{section.text}}</p>
-                    </div>
-                    <div v-if="section.videoText">
-                        <p>{{section.videoText}}</p>
-                    </div>
-                    <div v-if="section.linkText">
-                        <p>{{section.linkText}} <a :href="section.link" target="_blank">{{section.link}}</a></p>
-                    </div>
-                </div>
+        <img class="main-content-image" src="@/assets/menu_icons/Research.png">
+        <br><br>
+        <h3 class="text-center">{{intro.heading}}</h3>
+        <p class="text-center">{{intro.text}}</p>
+        <img src="@/assets/Research/workflowImg.png" class="center-image" style="width: 100%;">
+        <br><br>
+        <div v-for="(section, key) in sections" :key="key" class="">
+            <h3 class="text-center">{{section.heading}}</h3>
+            <div v-if="section.text">
+                <p class="text-center">{{section.text}}</p>
             </div>
-            <div class="col-sm-6">
-                <iframe src="https://www.youtube.com/embed/1Oqb0TOvV7k" style="width: 80vh; height: 40vh; margin-bottom: 100px;" allowfullscreen></iframe>
-                <img src="@/assets/Research/workflowImg.png" style="width: 80vh;">
+            <div v-if="section.videoText">
+                <p class="text-center">{{section.videoText}}</p>
+                <iframe src="https://www.youtube.com/embed/1Oqb0TOvV7k" class="center-image" allowfullscreen></iframe>
+                <br>
             </div>
+            <div v-if="section.linkText">
+                <p class="text-center">{{section.linkText}} <a :href="section.link" target="_blank">{{section.link}}</a></p>
+            </div>
+            <br><br>
         </div>
     </div>
 </template>
@@ -29,11 +30,11 @@ export default {
   name: 'research',
   data: function() {
       return {
-          sections: [
-              {
-                  heading: "Thesis Research Spring",
+          intro: {
+                  heading: "Thesis Research",
                   text: "For the past two years I have been conducting research on how virtual reality may be used to further STEM education, with a focus on additive manufacturing. Through this research I learned more about various modeling and gaming software, virtual reality, design for additive manufacturing, design of experiments, running and controlling experiments with human subjects, quantitative and qualitative data analysis, and the conventions of writing for a conference or journal."
-              },
+          },
+          sections: [
               {
                   heading: "Summer 2017",
                   videoText: "Presented my VR-3D printer demo at Rapid+TCT, a video of the gameplay can be seen here:",

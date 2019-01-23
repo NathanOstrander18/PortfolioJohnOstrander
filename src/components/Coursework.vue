@@ -1,19 +1,21 @@
 <template>
     <div class="main-content-container">
         <gallery :images="images" :index="index" @close="index = null"></gallery>
-        <div class="row mb-5" v-for="(section, key) in sections" :key="key">
-            <div class="col-md-6">
-                <h4>{{section.heading}}</h4>
-                <p>{{section.text}}</p>
-            </div>
-            <div v-if="section.imageIndex || section.imageIndex == 0" class="col-md-6">
+        <img class="main-content-image" src="@/assets/menu_icons/SchoolWork.png">
+        <br><br>
+        <div class="mb-5" v-for="(section, key) in sections" :key="key">
+            <h1 class="text-center">{{section.heading}}</h1>
+            <div v-if="section.imageIndex || section.imageIndex == 0">
+                <br>
                 <div @click="index = section.imageIndex">
-                    <img :src="images[section.imageIndex]" class="image" style="width: 70vh;"/>
+                    <img :src="images[section.imageIndex]" class="gallery-image center-image" style=" width: 70%;"/>
                 </div>
+                <br><br>
             </div>
-            <div v-if="section.file" class="col-md-6">
-                <div style="text-align:center">
-                    <a :href="'/' + section.file">{{section.fileTitle}}</a>
+            <p>{{section.text}}</p>
+            <div v-if="section.file">
+                <div class="text-center">
+                    <a :href="'/' + section.file" target="_blank">{{section.fileTitle}}</a>
                 </div>
             </div>
         </div>

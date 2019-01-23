@@ -1,38 +1,21 @@
-@font-face {
-    font-family: 'ADayWithoutSun';
-    src: url('/assets/A_DAY_WITHOUT_SUN.otf');
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(30, 78, 121);
+    font-size: 20pt;
 }
 h2 {
-    font-family: 'ADayWithoutSun', serif;
-    font-size: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(30, 78, 121);
+    font-size: 12pt;
 }
-h1 {
-    font-family: 'ADayWithoutSun', serif;
-    font-size: 18vh;
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(67, 67, 67);
+    font-size: 20pt;
 }
-
-hr {
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
-  border-style: solid none;
-  border-width: 1px 0;
-  margin: 18px 0;
-}
-@media screen and (min-width: 768px) {
-    .main-content-container {
-        height: 100%;
-        margin: 20px 20vh 0 20vh;
-    }
-}
-@media screen and (max-width: 768px) {
-    .main-content-container {
-        height: 100%;
-        margin: 20px 0 0 0;
-    }
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
 }
 .btn-primary-outline {
     background-color: transparent;
@@ -44,17 +27,17 @@ hr {
     margin-left: 20px;
     font-size: 20px;
 }
-.image {
-    float: left;
+.gallery-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     border: 1px solid #ebebeb;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 p {
-    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    text-indent: 0pt;
 }
 .title_img {
     width: 200px;
@@ -64,3 +47,44 @@ p {
   position: absolute;
   top: 50%;
 }
+
+.container {
+    height: 88vh;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+.route-name {
+    margin-top: 140px;
+}
+.main-content-image {
+    margin-top: 110px;
+    object-fit: scale-down;
+    width: 20%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto;
+}
+

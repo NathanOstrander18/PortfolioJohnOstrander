@@ -1,41 +1,28 @@
 <template>
     <div class="main-content-container">
-        <div v-for="(exp, key) in experiences" :key="key" class="row mb-5">
-            <div class="col-md-6">
-                <div v-if="exp.logo">
-                    <div v-if="key == 0">
-                        <p>
-                            <img class="title_img pull-left" :src="exp.logo"/>
-                            <span class="date">{{exp.date}}</span>
-                        </p>
-                    </div>
-                    <div v-else>
-                        <p>
-                            <img class="title_img pull-left" style="background-color:#D3D3D3;" :src="exp.logo"/>
-                            <span class="date">{{exp.date}}</span>
-                        </p>
-                    </div>
-                </div>
-                <div v-else>
-                    <p>
-                        <h3>{{exp.title}}<small class="date">{{exp.date}}</small></h3>
-                    </p>
-                </div>
-                <p>{{exp.description}}</p>
-                <a :href="exp.link">{{exp.link}}</a>
-            </div>
-            <div v-if="exp.title == 'Fusion 360 Student Expert'" class="col-md-6">
+        <img class="main-content-image" src="@/assets/menu_icons/FreelanceCAD.png">
+        <br><br>
+        <div v-for="(exp, key) in experiences" :key="key" class="mb-5">
+                <h3 class="text-center">{{exp.title}}</h3>
+                <h4 class="text-center">{{exp.date}}</h4>
+                <p class="text-center">{{exp.description}}</p>
+                <p class="text-center">
+                    <a :href="exp.link" target="_blank">{{exp.link}}</a>
+                </p>
+            <div class="row" v-if="exp.title == 'Fusion 360 Student Expert'">
                 <gallery :images="fusionDesigns" :index="index" @close="index = null"></gallery>
-                <div 
+                <div
+                    class="col-sm-4 mb-4"
                     v-for="(image, imageIndex) in fusionDesigns" 
                     :key="imageIndex" 
                     @click="index = imageIndex">
-                    <img :src="image" class="image" style="width: 70vh;"/>
+                    <img :src="image" class="gallery-image center-image" style="width: 100%;"/>
                 </div>
             </div>
-            <div v-if="exp.title == 'XACT Metal'" class="col-md-6">
-                <iframe src="https://www.youtube.com/embed/WYoEBgohg1I" width="600" height="300" allowfullscreen></iframe>
-            </div>
+            <div v-if="exp.title == 'XACT Metal'">
+                <iframe src="https://www.youtube.com/embed/7zrIU4JL4Sg" class="center-image" allowfullscreen></iframe>
+            </div> 
+            <br><br>
         </div>
     </div>
 </template>
@@ -72,14 +59,14 @@ export default {
                   title:"Chartlytics",
                   date:"Summer 2017",
                   description:"Modeled a demonstration of XACT Metal 3D Printing Technology in Virtual Reality. Included printer animations and allowed for user interaction. Used to advertise the technology at Rapid+TCT in Summer 2017. Design tools used: SolidWorks, Blender, Unity, HTC Vive.",
-                  link:"https://www.xactmetal.com/",
+                  link:"https://www.chartlytics.com/",
                   logo: ChartlyticsLogo
               },
               {
                   title:"XACT Metal",
                   date:"Spring 2017-Summer 2017",
                   description:"Iterative electronics case design and prototyping. Design tools & processes used: Fusion 360, SolidWorks, Material Extrusion, PolyJet, Stereolithography.",
-                  link:"https://www.chartlytics.com/",
+                  link:"https://www.xactmetal.com/",
                   logo: XActMetalLogo
               },
               {

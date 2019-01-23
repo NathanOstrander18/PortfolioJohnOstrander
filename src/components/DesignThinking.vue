@@ -1,18 +1,19 @@
 <template>
     <div class="main-content-container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div v-for="(section, key) in sections" :key="key" class="row mb-5">
-                        <h3>{{section.heading}}</h3>
-                        <div v-if="section.designChallenge">
-                            <p>Design Challenge: "<i>{{section.designChallenge}}</i>"</p>
-                        </div>
-                        <p>{{section.text}}</p>
+        <img class="main-content-image" src="@/assets/menu_icons/DesignThinking.png">
+        <br><br>
+        <h1 class="text-center">hasso-plattner-institute school of design thinking</h1>
+        <h2 class="text-center">Sept. 2017, March 2018</h2>
+        <p class="text-center">{{intro}}</p>
+        <br><br>
+        <img src="@/assets/DesignThinking/DesignThinkingCollage2.png" style="width: 100%;">
+        <br><br>
+        <div v-for="(section, key) in sections" :key="key" class="mb-5">
+                <h3 class="text-center">{{section.heading}}</h3>
+                <div v-if="section.designChallenge">
+                    <p>Design Challenge: "<i>{{section.designChallenge}}</i>"</p>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <img src="@/assets/DesignThinking/DesignThinkingCollage2.png" style="width: 80vh;">
-            </div>
+                <p>{{section.text}}</p>
         </div>
     </div>
 </template>
@@ -23,11 +24,8 @@ export default {
   name: 'designThinking',
   data: function() {
       return {
+          intro: "In the first year of my Masters in Engineering Design Program at Penn State, we were sent to the Hasso-Plattner-Institute School of Design Thinking in Potsdam Germany. I participated in the schools Global Deign Thinking week in August 2017 and March 2018.",
           sections: [
-              {
-                  heading: "Design Thinking",
-                  text: "In the first year of my Masters in Engineering Design Program at Penn State, we were sent to the Hasso-Plattner-Institute School of Design Thinking in Potsdam Germany. I participated in the schools Global Deign Thinking week in August 2017 and March 2018."
-              },
               {
                   heading: "March 22-28, 2018",
                   designChallenge: "Redesign the 3-S Experience (service, security, cleanliness) for relevant stakeholders on railway stations in a world which digitization is radically changing user’s needs as well as interactions.",

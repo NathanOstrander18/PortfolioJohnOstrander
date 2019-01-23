@@ -1,10 +1,10 @@
 <template>
-    <div class="home main-content-container">
-        <div class="row h-100 m-2">
-            <div v-for="(tile, index) in tiles" @mouseover="hoverTile(index)" @mouseout="hoverTile(-1)" class="col-sm-4 mb-2">
+    <div class="home">
+        <div class="row home-container">
+            <div v-for="(tile, index) in tiles" :key="index" @mouseover="hoverTile(index)" @mouseout="hoverTile(-1)" class="col-sm-6">
                 <router-link class="tile" :to="tile.source">
                         <img class="tile-image" :class="{'selected': isSelected(index)}" :src="tile.img" :alt="tile.title"> 
-                        <div class="tile-title" :class="{'selected': isSelected(index)}" >{{tile.title}}</div>
+                        <div class="tile-title" :class="{'selected': isSelected(index)}" ><h3>{{tile.title}}</h3></div>
                 </router-link>
             </div>
         </div>
@@ -25,9 +25,9 @@ export default {
         return {
             tiles: [
                 {title: "Internships", source: "/Internships", img: InternshipsIcon}, 
+                {title: "Coursework", source: "/Coursework", img: CourseworkIcon},
                 {title: "Design Thinking", source: "/DesignThinking", img: DesignThinkingIcon}, 
                 {title: "Freelance CAD", source: "/FreelanceCAD", img: FreelanceCADIcon},
-                {title: "Coursework", source: "/Coursework", img: CourseworkIcon},
                 {title: "Research", source: "/Research", img: ResearchIcon},
                 {title: "Leadership", source: "/Leadership", img: LeadershipIcon}
             ],
@@ -47,11 +47,18 @@ export default {
 
 <style scoped>
     .home {
-        height: 95%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .home-container {
+        margin: 2% 10% 3% 10%;
+        height: 35%
     }
     .tile {
-        height: 100%;
-        max-height: 34vh;
+        height: 90%;
+        max-height: 200px;
+        max-width: 200px;
+        min-width: 10vh;
         display: flex;
         position: relative;
         text-align: center;
@@ -61,7 +68,7 @@ export default {
         box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
         transition: height 0.3s, box-shadow 0.3s;
         overflow: hidden;
-        border-radius: 10px;
+        /* border-radius: 10px; */
     }
     .tile:hover {
         box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.5);

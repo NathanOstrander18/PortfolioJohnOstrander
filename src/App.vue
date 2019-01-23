@@ -1,22 +1,25 @@
 <template>
-  <div class="app-container">
-    <headView class="headView"/>
-    <navbar class="nav"/>
-    <div class="main-content">
-        <router-view/>
+    <div class="container">
+        <div class="row app-container">
+            <div class="col-sm-4 head">
+                <sidebar class="sidebar"/>
+            </div>
+            <div class="col-sm-8 head">
+                <navbar class="row"/>
+                <router-view/>
+            </div>
+        </div>
     </div>
-    <footer class="footer"/>
-  </div>
 </template>
 
 <script>
-    import headView from "@/components/headView.vue";
+    import sidebar from "@/components/Sidebar.vue";
     import navbar from "@/components/Navbar.vue";
 
     export default {
       name: 'app',
       components: {
-          headView,
+          sidebar,
           navbar
       }
     }
@@ -26,15 +29,13 @@
 /* Screen size is in total 100vh, all components must add up to this total */
     .app-container {
         /* need this to change size of other containers based on the screen size */
-        height: 100vh;
+        margin-top: 60px;
+        height: 90%;
+        
     }
-    .headView {
+    .head {
         /* mess with this to change the sizing of the pottom container */
-        width: 100%;
-        height: 18vh;
-        top: 0;
-        position: fixed;
-        overflow: hidden;
+        height: 100%;
     }
     .nav {
         /* mess with this to change the sizing of the pottom container */
@@ -42,7 +43,7 @@
         width: 100%;
         top: 18vh;
         position: fixed;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .main-content {
         /* mess with this to change the sizing of the pottom container */
