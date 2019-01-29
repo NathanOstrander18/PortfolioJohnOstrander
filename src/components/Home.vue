@@ -1,8 +1,8 @@
 <template>
     <div class="home">
         <div class="row home-container">
-            <div v-for="(tile, index) in tiles" :key="index" @mouseover="hoverTile(index)" @mouseout="hoverTile(-1)" class="col-sm-6">
-                <router-link class="tile" :to="tile.source">
+            <div v-for="(tile, index) in tiles" :key="index" @mouseover="hoverTile(index)" @mouseout="hoverTile(-1)" class="tile col-sm-6">
+                <router-link class="menu_link" :to="tile.source">
                         <img class="tile-image" :class="{'selected': isSelected(index)}" :src="tile.img" :alt="tile.title"> 
                         <div class="tile-title" :class="{'selected': isSelected(index)}" ><h3>{{tile.title}}</h3></div>
                 </router-link>
@@ -24,12 +24,12 @@ export default {
     data: function () {
         return {
             tiles: [
-                {title: "Internships", source: "/Internships", img: InternshipsIcon}, 
-                {title: "Coursework", source: "/Coursework", img: CourseworkIcon},
-                {title: "Design Thinking", source: "/DesignThinking", img: DesignThinkingIcon}, 
-                {title: "Freelance CAD", source: "/FreelanceCAD", img: FreelanceCADIcon},
-                {title: "Research", source: "/Research", img: ResearchIcon},
-                {title: "Leadership", source: "/Leadership", img: LeadershipIcon}
+                {title: "internships", source: "/Internships", img: InternshipsIcon}, 
+                {title: "coursework", source: "/Coursework", img: CourseworkIcon},
+                {title: "design thinking", source: "/DesignThinking", img: DesignThinkingIcon}, 
+                {title: "freelance cad", source: "/FreelanceCAD", img: FreelanceCADIcon},
+                {title: "research", source: "/Research", img: ResearchIcon},
+                {title: "leadership", source: "/Leadership", img: LeadershipIcon}
             ],
             selectedTile: -1
         }
@@ -51,13 +51,13 @@ export default {
         overflow: hidden;
     }
     .home-container {
-        margin: 2% 10% 3% 10%;
+        margin: 10px 50px 1% 50px;
         height: 35%
     }
     .tile {
         height: 90%;
-        max-height: 200px;
-        max-width: 200px;
+        max-height: 225px;
+        /* max-width: 200px; */
         min-width: 10vh;
         display: flex;
         position: relative;
@@ -76,11 +76,11 @@ export default {
     .tile-image {
         object-fit: scale-down;
         width: auto;
-        height: 75%;
+        height: 100%;
         
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
-        transition: height 0.3s, opacity 0.3s;
+        transition: height 0.3s, opacity 0.3s, filter 0.3s;
     }
     .tile-image.selected {
         opacity: 0.3;
@@ -100,12 +100,15 @@ export default {
         opacity: 0;
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
-        transition: opacity 0.3;
+        transition: opacity .7s;
     }
     .tile-title.selected {
         opacity: 1;
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
+    }
+    .menu_link {
+        height: 100%
     }
 
 </style>

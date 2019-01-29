@@ -10,7 +10,7 @@
             <router-link class="menu-tile" to="/DesignThinking">
                 <img class="menu-tile-img" src="@/assets/menu_icons/DesignThinking.png" title="Design Thinking"/>
             </router-link>
-            <p class="tile2 text-center">Design Thinking</p>
+            <p class="tile2 text-xs-center">Design Thinking</p>
         </div>
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/FreelanceCAD">
@@ -59,9 +59,14 @@
         width: 5vh;
         min-height: 53px;
         min-width: 53px;
+        transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+        transition: opacity .3s;
     }
     .menu-tile:hover {
-        opacity: .5;
+        transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+        opacity: .3;
     }
     
     .menu-tile-img {
@@ -72,11 +77,24 @@
     
     .tile1, .tile2, .tile3, .tile4, .tile5, .tile6 {
         white-space:nowrap;
-        visibility:hidden;
+        opacity: 0;
+        transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+        transition: opacity .7s;
     }
     
     .textwrap:hover .tile1, .textwrap:hover .tile2, .textwrap:hover .tile3, .textwrap:hover .tile4, .textwrap:hover .tile5, .textwrap:hover .tile6 { 
-        visibility:visible;
+        opacity: 1;
+        transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+    }
+    
+    .navbar {
+        margin-top: 12px;
+    }
+    
+    p {
+        font-size: 10px;
     }
     
 

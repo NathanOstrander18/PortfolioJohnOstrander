@@ -6,7 +6,9 @@
             </div>
             <div class="col-sm-8 head">
                 <navbar class="row"/>
-                <router-view/>
+                <transition name="fade">
+                    <router-view v-if="" :key="$route.name"></router-view>
+                </transition>
             </div>
         </div>
     </div>
