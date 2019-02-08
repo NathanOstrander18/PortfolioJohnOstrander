@@ -2,37 +2,37 @@
     <div class="navbar">
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/Internships">
-                <img class="menu-tile-img" src="@/assets/menu_icons/Internships.png" title="Internships"/>
+                <img class="menu-tile-img" src="@/assets/menu_icons/Internships.png"/>
             </router-link>
             <p class="tile1 text-center">Internships</p>
         </div>
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/DesignThinking">
-                <img class="menu-tile-img" src="@/assets/menu_icons/DesignThinking.png" title="Design Thinking"/>
+                <img class="menu-tile-img" src="@/assets/menu_icons/DesignThinking.png"/>
             </router-link>
             <p class="tile2 text-xs-center">Design Thinking</p>
         </div>
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/FreelanceCAD">
-                <img class="menu-tile-img" src="@/assets/menu_icons/FreelanceCAD.png" title="Freelance CAD"/>
+                <img class="menu-tile-img" src="@/assets/menu_icons/FreelanceCAD.png"/>
             </router-link>
             <p class="tile3 text-center">Freelance CAD</p>
         </div>
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/Coursework">
-                <img class="menu-tile-img" src="@/assets/menu_icons/SchoolWork.png" title="Coursework"/>
+                <img class="menu-tile-img" src="@/assets/menu_icons/SchoolWork.png"/>
             </router-link>
             <p class="tile4 text-center">Coursework</p>
         </div>
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/Research">
-                <img class="menu-tile-img" src="@/assets/menu_icons/Research.png" title="Research"/>
+                <img class="menu-tile-img" src="@/assets/menu_icons/Research.png"/>
             </router-link>
             <p class="tile5 text-center">Research</p>
         </div>
         <div class="col-sm-2 textwrap">
             <router-link class="menu-tile" to="/Leadership">
-                <img class="menu-tile-img" src="@/assets/menu_icons/Leadership.png" title="Leadership"/>
+                <img class="menu-tile-img" src="@/assets/menu_icons/Leadership.png"/>
             </router-link>
             <p class="tile6 text-center">Leadership</p>
         </div>

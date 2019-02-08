@@ -1,30 +1,42 @@
 <template>
     <div class="main-content-container">
+        <gallery :images="images" :index="index" @close="index = null"></gallery>
         <img class="main-content-image" src="@/assets/menu_icons/Research.png">
         <br><br>
         <h3 class="text-center">{{intro.heading}}</h3>
-        <p class="text-center">{{intro.text}}</p>
-        <img src="@/assets/Research/workflowImg.png" class="center-image" style="width: 100%;">
+        <p class="text-justify">{{intro.text1}}<a href="https://www.lulzbot.com/learn/tutorials/experience-virtual-reality-3d-printing" target="_blank">(shown here)</a>{{intro.text2}}</p>
+        <div @click="index = 0">
+            <img :src="images[0]" class="center-image gallery-image" style="width: 100%;">
+        </div>
         <br><br>
-        <div v-for="(section, key) in sections" :key="key" class="">
-            <h3 class="text-center">{{section.heading}}</h3>
-            <div v-if="section.text">
-                <p class="text-center">{{section.text}}</p>
-            </div>
-            <div v-if="section.videoText">
-                <p class="text-center">{{section.videoText}}</p>
-                <iframe src="https://www.youtube.com/embed/1Oqb0TOvV7k" class="center-image" allowfullscreen></iframe>
-                <br>
-            </div>
-            <div v-if="section.linkText">
-                <p class="text-center">{{section.linkText}} <a :href="section.link" target="_blank">{{section.link}}</a></p>
-            </div>
-            <br><br>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/1Oqb0TOvV7k" class="center-image video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/WYoEBgohg1I" class="center-image video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="text-center skills font-weight-bold">TOOLS USED</div>
+        <p class="text-center skills">{{tools}}</p>
+        <div class="text-center skills font-weight-bold">SKILLS LEARNED</div>
+        <p class="text-center skills">{{skills}}</p>
+        <div class="text-center skills font-weight-bold">PUBLICATIONS</div>
+        <p class="text-center">
+            <a :href="publication" target="_blank">{{publication}}</a>
+        </p>
+        <br>
+        <div>
+            <VueElevator class="skills text-center" word="Back to Top" duration="1000" mainAudio="" endAudio=""></VueElevator>
         </div>
     </div>
 </template>
 
 <script>
+import { VueElevator } from 'vue-elevator';
+import VueGallery from 'vue-gallery';
+
+import workflow from "@/assets/Research/workflowImg.png"
 
 export default {
   name: 'research',
@@ -32,36 +44,19 @@ export default {
       return {
           intro: {
                   heading: "Thesis Research",
-                  text: "For the past two years I have been conducting research on how virtual reality may be used to further STEM education, with a focus on additive manufacturing. Through this research I learned more about various modeling and gaming software, virtual reality, design for additive manufacturing, design of experiments, running and controlling experiments with human subjects, quantitative and qualitative data analysis, and the conventions of writing for a conference or journal."
+                  text1: "For the past two years I have been conducting research on how Virtual Reality may be used to further STEM education with a focus on Additive Manufacturing. In doing this research I have had the opportunity to present at Rapid+TCT 2017, inspire the development of similar VR-AM experiences ",
+                  text2: ", run human subjects studies with over 100 participants, present at IDETC 2019, submit work to the Journal of Mechanical Design, and mentor Graduate and Undergraduate students to take my research to the next level! "      
           },
-          sections: [
-              {
-                  heading: "Summer 2017",
-                  videoText: "Presented my VR-3D printer demo at Rapid+TCT, a video of the gameplay can be seen here:",
-                  linkText: "Inspired an open source web-based VR-3D Printer designed by Aleph Objects. Credit shown here:",
-                  video: "https://www.youtube.com/embed/1Oqb0TOvV7k",
-                  link: "https://www.lulzbot.com/learn/tutorials/experience-virtual-reality-3d-printing"
-              },
-              {
-                  heading: "Fall 2017-Spring 2018",
-                  text: "Ran an experiment involving over 100 first year engineering students. The experiment aimed to explore VR has on Additive Manufacturing Education."
-              },
-              {
-                  heading: "Summer 2018",
-                  linkText: "Presented my work at IDETC in Quebec City. My published work can be seen here:",
-                  downloadText: "If you would like to read it you may download my 2018 IDETC paper for free here",
-                  link: "https://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleID=2713334"
-              },
-              {
-                  heading: "Fall 2018",
-                  text: "Ran an experiment involving a small group of students experienced in additive manufacturing. The experiment aims to evaluate the effect that different types of virtual reality might have on design decision making in additive manufacturing."
-              },
-              {
-                  heading: "Spring 2018",
-                  text: "Submitting new research to IDETC 2019."
-              }
-          ]
+          tools: "SolidWorks • Blender • Unity • C# • htc VIVE • SPSS • Microsoft Excel • Microsoft Word • Mendeley • Google Forms • Lulzbot Open Source Library • Material Extrusion",
+          skills: "Human Computer Interaction • Design for Additive Manufacturing • Lesson Plan Design •  Design of Experiments • Human Subjects Research • Quantitative and Qualitative Data Analysis • Writing Conventions for Conference and Journal Publications",
+          publication: "https://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleID=2713334",
+          images: [workflow],
+          index: null
       }
+  },
+  components: {
+      'gallery': VueGallery,
+      'VueElevator': VueElevator
   }
 }
 </script>

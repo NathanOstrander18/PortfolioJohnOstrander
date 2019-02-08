@@ -56,4 +56,10 @@
         height: 76.70vh;
         overflow: scroll;
     }
+    .elevator {
+        position: fixed;
+        bottom: 0;
+        z-index: 1030;
+        font-size: 8pt;
+    }
 </style>

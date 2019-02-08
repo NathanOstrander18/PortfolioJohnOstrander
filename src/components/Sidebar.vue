@@ -8,7 +8,7 @@
         </router-link>
         <transition name="fade" mode="out-in">
             <div v-if="['Home'].indexOf($route.name) == 0" class="row about" key="home"><p>{{about[0]}}<br><br>{{about[1]}}</p></div>
-            <div v-else class="row route-name" :key="$route.name" mode="in-out"><h1>{{$route.name}}</h1></div>
+            <div v-else class="row route-name" :key="$route.name" mode="in-out"><h1 style="color: black;">{{$route.name.toLowerCase()}}</h1></div>
         </transition>
         <h2 class="row contact"><a href="/JohnOstranderResume2019.pdf" target="_blank">Resume</a></h2>
         <h2 class="row">Contact:</h2>
@@ -28,8 +28,9 @@
       data: function() {
           return {
               about:[
-                  "I’m a design engineer with a background in mechanical engineering and currently completing my masters in engineering design. I’m passionate about human centered design, computer aided design and design for additive manufacturing.",
-                  "In my free time I enjoy hiking, rock climbing, knitting, videogames and making pickles"
+                  "I’m a design engineer with a B.S in Mechanical Engineering and M.S in Engineering Design from Penn State. I’m passionate about human centered design, computer aided design and design for additive manufacturing.",
+                  "I’m currently working as a graduate researcher for the Engineering Design and Optimizations Group (EDOG) and the Made By Design Lab (MBDL) at Penn State.",
+                  "In my free time I enjoy hiking, rock climbing, waterskiing, knitting, board games, and cooking soul food."
               ]
           }
       }
@@ -38,28 +39,12 @@
 
 <style scoped>
     
-    a {
-        color: rgb(30, 78, 121);
-    }
-    
-    a:hover, .name:hover {
-        text-decoration: none;
-        opacity: .5;
-    }
-    
     .about {
         margin-top: 50px;
     }
     
     .contact {
         margin-top: 50px;
-    }
-    
-    .copy {
-        position: fixed;
-        bottom: 0;
-        z-index: 1030;
-        font-size: 8pt;
     }
     
 
