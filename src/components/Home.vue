@@ -3,7 +3,7 @@
         <div class="row home-container">
             <div v-for="(tile, index) in tiles" :key="index" @mouseover="hoverTile(index)" @mouseout="hoverTile(-1)" class="tile col-sm-6">
                 <router-link class="menu_link" :to="tile.source">
-                        <img class="tile-image" :class="{'selected': isSelected(index)}" :src="tile.img" :alt="tile.title"> 
+                        <img class="tile-image" :class="{'selected': isSelected(index)}" :src="tile.img" :alt="tile.title">
                         <div class="tile-title" :class="{'selected': isSelected(index)}" ><h3>{{tile.title}}</h3></div>
                 </router-link>
             </div>
@@ -24,9 +24,9 @@ export default {
     data: function () {
         return {
             tiles: [
-                {title: "internships", source: "/Internships", img: InternshipsIcon}, 
+                {title: "", source: "/Internships", img: InternshipsIcon},
                 {title: "coursework", source: "/Coursework", img: CourseworkIcon},
-                {title: "design thinking", source: "/DesignThinking", img: DesignThinkingIcon}, 
+                {title: "design thinking", source: "/DesignThinking", img: DesignThinkingIcon},
                 {title: "freelance cad", source: "/FreelanceCAD", img: FreelanceCADIcon},
                 {title: "research", source: "/Research", img: ResearchIcon},
                 {title: "leadership", source: "/Leadership", img: LeadershipIcon}
@@ -77,20 +77,22 @@ export default {
         object-fit: scale-down;
         width: auto;
         height: 100%;
-        
+
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
         transition: height 0.3s, opacity 0.3s, filter 0.3s;
     }
     .tile-image.selected {
-        opacity: 0.3;
+      /* change opacity below */
+        opacity: 1.0;
         height: 100%;
-        filter: blur(8px);
-        -webkit-filter: blur(8px);
+        /* change blur */
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
     }
-    
+
     .tile-title {
         color: black;
         position: absolute;
