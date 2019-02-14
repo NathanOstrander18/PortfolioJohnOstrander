@@ -43,9 +43,9 @@ export default {
   data: function() {
       return {
           intro: {
-                  heading: "Thesis Research",
+                  heading: "thesis research",
                   text1: "For the past two years I have been conducting research on how Virtual Reality may be used to further STEM education with a focus on Additive Manufacturing. In doing this research I have had the opportunity to present at Rapid+TCT 2017, inspire the development of similar VR-AM experiences ",
-                  text2: ", run human subjects studies with over 100 participants, present at IDETC 2019, submit work to the Journal of Mechanical Design, and mentor Graduate and Undergraduate students to take my research to the next level! "      
+                  text2: ", run human subjects studies with over 100 participants, present at IDETC 2018, submit work to the Journal of Mechanical Design, and mentor Graduate and Undergraduate students to take my research to the next level! "      
           },
           tools: "SolidWorks • Blender • Unity • C# • htc VIVE • SPSS • Microsoft Excel • Microsoft Word • Mendeley • Google Forms • Lulzbot Open Source Library • Material Extrusion",
           skills: "Human Computer Interaction • Design for Additive Manufacturing • Lesson Plan Design •  Design of Experiments • Human Subjects Research • Quantitative and Qualitative Data Analysis • Writing Conventions for Conference and Journal Publications",
@@ -64,7 +64,7 @@ export default {
 <style scoped>
     .tile {
         background-color: #D3D3D3;
-        height: 100%;  
+        height: 100%;
         min-height: 15vh;
         display: flex;
         flex-direction: column;

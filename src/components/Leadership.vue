@@ -49,7 +49,7 @@ export default {
           },
           images: [img5, img3, img4, img2, img1],
           index: null,
-          tools: "Slack • Google Calendar • Co.Space App + Backend • Home Renovation Tools",
+          tools: "Slack • Google Calendar • co.space App + Backend • Home Renovation Tools",
           skills: "Group Facilitation • Logistics • Empathy • Ideation • Personal Development • Pitching and Launching Projects • Cooking for 20 People!",
           activities: "Journey Jumps • Deep Listening • Coffee Stains • Cleaning Blitz • Family Dinners • Guest Dinners • Pitch Dinners"
       }

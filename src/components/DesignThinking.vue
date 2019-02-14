@@ -43,7 +43,7 @@ export default {
   name: 'designThinking',
   data: function() {
       return {
-          intro: "In the first year of my Engineering Design Program at Penn State, we were sent to the Hasso-Plattner-Institute School of Design Thinking in Potsdam Germany. I participated in the schools Global Design Thinking week in August 2017 and March 2018.",
+          intro: "In the first year of my Engineering Design Program at Penn State, we were sent to the Hasso-Plattner-Institute School of Design Thinking in Potsdam Germany. I participated in the schools Global Design Thinking week in September 2017 and March 2018.",
           sections: [
               {
                   heading: "March 22-28, 2018",
@@ -71,15 +71,15 @@ export default {
 
 <style scoped>
     hr {
-        width: 100%; 
-        color: black; 
-        height: 1px; 
+        width: 100%;
+        color: black;
+        height: 1px;
         background-color:black;
     }
-    
+
     .tile {
         background-color: #D3D3D3;
-        height: 100%;  
+        height: 100%;
         min-height: 15vh;
         display: flex;
         flex-direction: column;

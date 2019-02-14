@@ -17,7 +17,7 @@
             <div v-if="exp.tools" class="text-center skills font-weight-bold">TOOLS USED</div>
             <p class="text-center skills">{{exp.tools}}</p>
             <div v-if="exp.skills" class="text-center skills font-weight-bold">SKILLS LEARNED</div>
-            <p class="text-center skills">{{exp.skills}}</p> 
+            <p class="text-center skills">{{exp.skills}}</p>
             <br><br>
         </div>
         <div>
@@ -51,7 +51,7 @@ export default {
           experiences: [
               {
                   title:"AIONX",
-                  date:"summer 2017-current",
+                  date:"Summer 2017-Current",
                   description:"AIONX is a growing company with the technology to continuously clean surfaces for high touch areas in hospitals. For over a year now I have been working with AIONX to design PCB cases and hospital bedrail covers fit to their technologies. In addition to designing around PCB geometry, I also work with point cloud scans to fit rail cover designs to real-world geometries. I am often communicating with the engineering and manufacturing leads to ensure a successful product launch. My work cannot be displayed here because it is covered under NDA.",
                   link:"http://aionx.com/",
                   logo: AIONIXLogo,
@@ -60,7 +60,7 @@ export default {
               },
               {
                   title:"Chartlytics",
-                  date:"summer 2017",
+                  date:"Summer 2017",
                   description:"Chartlytics is a company focused on behavior tracking in an educational setting. While under contract I was tasked with developing case designs for their tangible product concept. My work cannot be displayed here because it is covered under NDA.",
                   link:"https://www.chartlytics.com/",
                   logo: ChartlyticsLogo,
@@ -69,7 +69,7 @@ export default {
               },
               {
                   title:"XACT Metal",
-                  date:"spring 2017-summer 2017",
+                  date:"Spring 2017-Summer 2017",
                   description:"Xact Metal is a startup company based in State College that designs and manufactures their own metal and polymer Powder Bed Fusion machines. While under contract with this company, I was tasked with designing a demonstration of Xact Metal technology in Virtual Reality for a trade show. The demonstration included printer animations and allowed for user interaction. The final product was used to advertise the technology at Rapid+TCT in Summer 2017.",
                   link:"https://www.xactmetal.com/",
                   logo: XActMetalLogo,
@@ -77,7 +77,7 @@ export default {
                   skills: "Moving Objects from SolidWorks to VR • Coding Interactions • Coding Animations • Unity Colors/Textures/Shaders • Human Computer Interaction"
               },
               {
-                  title:"fusion 360 student expert",
+                  title:"Fusion 360 Student Expert",
                   date:"",
                   description:"For a year I was enrolled in the Fusion 360 Student Expert Program. The program challenged me to come up with original designs containing complex features and multiple bodies. I submitted three designs to the program and received monetary awards for each.",
                   link:"",
@@ -97,21 +97,21 @@ export default {
 </script>
 
 <style scoped>
-    
+
     .tile {
         background-color: #D3D3D3;
-        height: 100%;  
+        height: 100%;
         min-height: 15vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .section {
         height: 100%
     }
-    
+
     .title:hover {
         text-decoration: none;
         opacity: .5;

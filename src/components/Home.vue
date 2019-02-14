@@ -24,7 +24,7 @@ export default {
     data: function () {
         return {
             tiles: [
-                {title: "", source: "/Internships", img: InternshipsIcon},
+                {title: "internships", source: "/Internships", img: InternshipsIcon},
                 {title: "coursework", source: "/Coursework", img: CourseworkIcon},
                 {title: "design thinking", source: "/DesignThinking", img: DesignThinkingIcon},
                 {title: "freelance cad", source: "/FreelanceCAD", img: FreelanceCADIcon},
@@ -87,8 +87,8 @@ export default {
         opacity: 1.0;
         height: 100%;
         /* change blur */
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
     }
