@@ -41,11 +41,11 @@ export default {
   data: function() {
       return {
           intro: {
-              heading: "Co Space House Manager",
-              date: "summer 2017-summer 2018",
+              heading: "co.space house manager",
+              date: "Summer 2017-Summer 2018",
               text: "I spent a year managing a house filled with 20 incredible honors students, graduate students, and young professionals. As house manager I was responsible for managing monthly pitch dinners, weekly house meetings, cleaning blitz, family dinners, retreats, house maintenance, guest dinners and plenty of spontaneous events! There is a lot of work involved in keeping a big house functional, especially when you are in grad school, but I had a lot of fun doing it and I wouldn’t trade my co.space experience for anything.",
-              linkText: "You can find me on the Co Space website in class of 2018",
-              link: "http://thecospace.com/people/" 
+              linkText: "You can find me on the co.space website in class of 2018",
+              link: "http://thecospace.com/people/"
           },
           images: [img5, img3, img4, img2, img1],
           index: null,
@@ -63,15 +63,15 @@ export default {
 
 <style scoped>
     hr {
-        width: 100%; 
-        color: black; 
-        height: 1px; 
+        width: 100%;
+        color: black;
+        height: 1px;
         background-color:black;
     }
-    
+
     .tile {
         background-color: #D3D3D3;
-        height: 100%;  
+        height: 100%;
         min-height: 15vh;
         display: flex;
         flex-direction: column;
