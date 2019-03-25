@@ -25,7 +25,7 @@
         <div>
             <VueElevator class="skills text-center" word="Back to Top" duration="1000" mainAudio="" endAudio=""></VueElevator>
         </div>
-        </br>
+        <br/>
     </div>
 </template>
 

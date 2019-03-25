@@ -4,13 +4,13 @@
         <img class="main-content-image" src="@/assets/menu_icons/FreelanceCAD.png">
         <br><br>
         <div v-for="(exp, key) in experiences" :key="key" class="mb-5 section">
-                <a :href="exp.link" target="_blank"><h3 class="title text-center">{{exp.title}}</h3></a>
-                <h4 class="text-center">{{exp.date}}</h4>
-                <p class="text-justify">{{exp.description}}</p>
-                <div v-if="exp.title == 'fusion 360 student expert'" @click="index = 0">
-                    <img class="gallery-image center-image" :src="fusionDesigns[0]" style="width: 100%;">
-                    <br>
-                </div>
+            <a :href="exp.link" target="_blank"><h3 class="title text-center">{{exp.title}}</h3></a>
+            <h4 class="text-center">{{exp.date}}</h4>
+            <p class="text-justify">{{exp.description}}</p>
+            <div v-if="exp.title == 'fusion 360 student expert'" @click="index = 0">
+                <img class="gallery-image center-image" :src="fusionDesigns[0]" style="width: 100%;">
+                <br>
+            </div>
             <div class="video-container" v-if="exp.title == 'XACT Metal'">
                 <iframe src="https://www.youtube.com/embed/7zrIU4JL4Sg" class="center-image video" allowfullscreen></iframe>
             </div>
@@ -77,10 +77,10 @@ export default {
                   skills: "Moving Objects from SolidWorks to VR • Coding Interactions • Coding Animations • Unity Colors/Textures/Shaders • Human Computer Interaction"
               },
               {
-                  title:"Fusion 360 Student Expert",
+                  title:"fusion 360 student expert",
                   date:"",
                   description:"For a year I was enrolled in the Fusion 360 Student Expert Program. The program challenged me to come up with original designs containing complex features and multiple bodies. I submitted three designs to the program and received monetary awards for each.",
-                  link:"",
+                  link:"https://gallery.autodesk.com/fusion360/users/JTQ8JQZACWCR",
                   tools: "Fusion 360 Modeling • Fusion 360 Rendering",
                   skills: "Basic CAD • Design for Assembly • Rendering"
               }
